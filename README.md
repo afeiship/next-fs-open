@@ -16,21 +16,23 @@ npm install -S afeiship/react-ant-pop-confirm
   ```
 2. import js
   ```js
-  import React from 'react';
+  import ReactAntPopConfirm from '../src/main';
   import ReactDOM from 'react-dom';
-  import ReactAntPopConfirm from 'react-ant-pop-confirm';
-  
-  // your app:
-  class App extends React.Component{
-    render(){
+  import React from 'react';
+  import './assets/style.scss';
+
+  class App extends React.Component {
+    componentDidMount() {}
+    render() {
       return (
-        <ReactAntPopConfirm />
-      )
+        <div className="app-container">
+          <ReactAntPopConfirm children="删除"/>
+        </div>
+      );
     }
   }
 
-  // render to dom:
-  ReactDOM.render(<App/>, document.getElementById('app'));
+  ReactDOM.render(<App />, document.getElementById('app'));
   ```
 
 ## documentation
