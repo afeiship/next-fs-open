@@ -41,5 +41,15 @@
   "dependencies": {
     "@jswork/is-valid-url": "^1.0.0",
     "node-fetch": "^2.6.1"
-  }
+  },
+  "keywords": [
+    "next",
+    "fs",
+    "file",
+    "read",
+    "open",
+    "buffer",
+    "remote",
+    "local"
+  ]
 }
