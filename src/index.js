@@ -18,7 +18,7 @@
         });
       },
       from: function (inTarget) {
-        if (Buffer.isBuffer(inTarget)) return inTarget;
+        if (Buffer.isBuffer(inTarget)) return Promise.resolve(inTarget);
         var valid = isValidUrl(inTarget);
         var api = valid ? 'fromUrl' : 'fromFile';
         return this[api](inTarget);
