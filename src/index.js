@@ -17,10 +17,11 @@
           });
         });
       },
-      from: function (inUrl) {
-        var valid = isValidUrl(inUrl);
+      from: function (inTarget) {
+        if (Buffer.isBuffer(inTarget)) return inTarget;
+        var valid = isValidUrl(inTarget);
         var api = valid ? 'fromUrl' : 'fromFile';
-        return this[api](inUrl);
+        return this[api](inTarget);
       }
     }
   });
