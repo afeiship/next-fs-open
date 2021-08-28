@@ -13,11 +13,7 @@
       fromFile: function (inFilename) {
         return new Promise((resolve, reject) => {
           fs.readFile(inFilename, (err, data) => {
-            if (err) {
-              reject(err);
-            } else {
-              resolve(data);
-            }
+            err ? reject(err) : resolve(data);
           });
         });
       },
