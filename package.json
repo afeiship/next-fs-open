@@ -1,69 +1,45 @@
 {
-  "name": "react-ant-pop-confirm",
+  "name": "@jswork/next-fs-open",
   "version": "1.0.0",
-  "description": "Popup confirm for antd.",
-  "main": "dist/index.js",
+  "description": "Open/read file from local or remote.",
+  "homepage": "https://github.com/afeiship/next-fs-open",
+  "author": {
+    "name": "afei",
+    "email": "1290657123@qq.com"
+  },
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --env.type=dev",
-    "build": "cross-env NODE_ENV=production webpack -p --env.type=build",
-    "release": "cross-env NODE_ENV=production webpack -p --env.type=release",
-    "docs": "cross-env NODE_ENV=production webpack -p --env.type=docs",
-    "start": "node build/server.js",
-    "test": "jest"
+    "build": "gulp",
+    "test": "jest",
+    "release": "release-it"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/afeiship/react-ant-pop-confirm.git"
-  },
-  "keywords": [
-    "react",
-    "component"
-  ],
-  "author": "afei",
+  "main": "dist/index.js",
   "license": "MIT",
-  "browserslist": {
-    "production": [
-      "last 2 version",
-      "Explorer >= 10",
-      "Android >= 4"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "bugs": {
-    "url": "https://github.com/afeiship/react-ant-pop-confirm/issues"
-  },
-  "homepage": "https://github.com/afeiship/react-ant-pop-confirm#readme",
   "devDependencies": {
-    "@babel/core": "^7.4.0",
-    "@babel/plugin-proposal-class-properties": "^7.4.0",
-    "@babel/plugin-proposal-decorators": "^7.4.0",
-    "@babel/preset-env": "^7.4.2",
-    "@babel/preset-react": "^7.0.0",
-    "@babel/register": "^7.4.0",
-    "babel-loader": "^8.0.5",
-    "cross-env": "^5.2.0",
-    "express": "^4.16.4",
-    "jest": "^24.5.0",
-    "prettier": "^1.16.4",
-    "rake-git": "github:afeiship/rake-git",
-    "react-testing-library": "^6.0.2",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.3.0",
-    "webpack-dev-server": "^3.2.1",
-    "webpack-lib-kits": "github:afeiship/webpack-lib-kits",
-    "webpack-merge": "^4.2.1"
+    "@babel/core": "^7.13.14",
+    "@babel/preset-env": "^7.13.12",
+    "@jswork/gulp-pkg-header": "^1.0.4",
+    "@jswork/next": "^1.0.9",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-debug": "^4.0.0",
+    "gulp-ignore": "^3.0.0",
+    "gulp-load-plugins": "^2.0.6",
+    "gulp-rename": "^2.0.0",
+    "gulp-size": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "jest": "^26.6.3",
+    "release-it": "^14.2.2",
+    "uglify-js": "3.12.4",
+    "uglify-save-license": "^0.4.1"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
-    "antd": "^3.22.0",
-    "classnames": "^2.2.6",
-    "node-sass": "^4.12.0",
-    "noop": "github:afeiship/noop",
-    "prop-types": "^15.7.2",
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5"
+    "@jswork/is-valid-url": "^1.0.0",
+    "node-fetch": "^2.6.1"
   }
 }
