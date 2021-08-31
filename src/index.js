@@ -5,10 +5,11 @@
   var isValidUrl = require('@jswork/is-valid-url').default;
   var fs = require('fs');
   var util = require('util');
+  var fromFile = util.promisify(fs.readFile);
 
   var NxFsOpen = nx.declare('nx.FsOpen', {
     statics: {
-      fromFile: util.promisify(fs.readFile),
+      fromFile,
       fromUrl: function (inUrl) {
         return fetch(inUrl).then((r) => r.buffer());
       },
