@@ -1,6 +1,6 @@
 {
   "name": "@jswork/next-fs-open",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Open/read file from local or remote.",
   "homepage": "https://github.com/afeiship/next-fs-open",
   "author": {
