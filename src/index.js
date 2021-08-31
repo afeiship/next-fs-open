@@ -4,18 +4,13 @@
   var fetch = require('node-fetch');
   var isValidUrl = require('@jswork/is-valid-url').default;
   var fs = require('fs');
+  var util = require('util');
 
   var NxFsOpen = nx.declare('nx.FsOpen', {
     statics: {
+      fromFile: util.promisify(fs.readFile),
       fromUrl: function (inUrl) {
         return fetch(inUrl).then((r) => r.buffer());
-      },
-      fromFile: function (inFilename) {
-        return new Promise((resolve, reject) => {
-          fs.readFile(inFilename, (err, data) => {
-            err ? reject(err) : resolve(data);
-          });
-        });
       },
       from: function (inTarget) {
         if (Buffer.isBuffer(inTarget)) return Promise.resolve(inTarget);
